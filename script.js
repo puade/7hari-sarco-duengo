@@ -5,7 +5,7 @@
 
   // Jika parameter 'kepada' ada, tambahkan ke URL
   if (recipientName) {
-    const newUrl = `https://puade.github.io/7-hari-tuti-husain/?kepada=${recipientName}`;
+    const newUrl = `https://puade.github.io/7hari-sarco-duengo/?kepada=${recipientName}`;
     // Update og:url dengan URL yang baru
     document.querySelector('meta[property="og:url"]').setAttribute("content", newUrl);
 
@@ -15,7 +15,7 @@
   
     // Countdown function
     function countdown() {
-      const countDate = new Date("August 08, 2025 19:00:00").getTime();
+      const countDate = new Date("October 09, 2025 18:00:00").getTime();
       const now = new Date().getTime();
       const gap = countDate - now;
   
@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Fungsi untuk mengambil semua data ucapan dari Google Sheets
 function fetchUcapan() {
-  var url = 'https://script.google.com/macros/s/AKfycbwNKCe9hQNVwd_G5fz0bqJCANbhX3mKMw6vh6EyuqXaGnGJeMupc4qKC8f15yObAN6x/exec'; // Ganti dengan URL Web App Google Apps Script Anda
+  var url = 'https://script.google.com/macros/s/AKfycbxyQYIGlMK24ZOM8musEc7NqXBskGrA3lIq7bnenPVNYydiyl27Z3mTy_bluR_pvSse/exec'; // Ganti dengan URL Web App Google Apps Script Anda
   
   fetch(url)
     .then(response => response.json())
@@ -195,7 +195,7 @@ document.getElementById('formPernikahan').addEventListener('submit', function(ev
   const kehadiran = document.getElementById('kehadiran').value;
   const pesan = document.getElementById('pesan').value;
 
-  fetch('https://script.google.com/macros/s/AKfycbwNKCe9hQNVwd_G5fz0bqJCANbhX3mKMw6vh6EyuqXaGnGJeMupc4qKC8f15yObAN6x/exec', {
+  fetch('https://script.google.com/macros/s/AKfycbxyQYIGlMK24ZOM8musEc7NqXBskGrA3lIq7bnenPVNYydiyl27Z3mTy_bluR_pvSse/exec', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
     body: new URLSearchParams({ 'nama': nama, 'kehadiran': kehadiran, 'pesan': pesan })
@@ -306,5 +306,4 @@ document.getElementById('modal-image').src = images[currentIndex];
   const counters = document.querySelectorAll('.counter');
   counters.forEach(counter => {
       observer.observe(counter);
-
   });
